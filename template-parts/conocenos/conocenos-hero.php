@@ -1,0 +1,8 @@
+<!-- Hero -->
+<section class="hero bg-image-cover" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/conocenos-bg.jpg');">
+  <div class="overlay-dark"></div>
+  <div class="hero-content">
+    <h1 class="hero-title text-shadow">Conócenos</h1>
+    <p class="hero-subtitle">Viviendo experiencias naturales y místicas</p>
+  </div>
+</section>

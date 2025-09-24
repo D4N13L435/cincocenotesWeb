@@ -1,0 +1,521 @@
+/* Fondo general */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #f7f5f0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3c3c3c;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Footer*/
+footer {
+  /*background-color: #0c1f1c; /* Verde profundo tipo cenote */
+  background: linear-gradient(to bottom, #496d3d, #0c1f1c);
+  color: #f0f0f0;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+footer {
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Header */
+header {
+    background-color: #496d3d;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo img {
+    max-height: 70px;
+    width: auto;
+}
+
+.logo h1, .logo a {
+    color: #f0e6d2;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Nav container */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Menú */
+.nav-menu,
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: #f0e6d2;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #7a5c3e;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-menu {
+    z-index: 1000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Para que logo y nav se apilen si necesario */
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        background-color: #496d3d;
+        padding: 15px 0;
+        position: absolute;
+        top: 65px; /* Altura aprox del header */
+        left: 0;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+
+/*HERO*/
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Encima del overlay */
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+
+
+.hero-title {
+ font-family: 'Cinzel Decorative', serif;  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero-subtitle {
+font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+
+
+.hero-logo {
+  max-width: 120px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+.btn-primary {
+  background-color: #496d3d;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3a5831;
+}
+
+/*Seccion galeria frontpage*/
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--rounded);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/*Galeria opcion 2*/
+.gallery {
+  text-align: center;
+  padding: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+/*Video*/
+.video-section {
+  text-align: center;
+  padding: 2rem;
+  /*background: #f0f4f8;*/
+}
+
+.video-section h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  /*color: #004d40;*/
+}
+
+.video-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*CONTACTANOS CARDS*/
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-banner {
+  background: #25D366; /* WhatsApp */
+  padding: 1rem;
+}
+
+.card.whatsapp .card-banner { background: #25D366; }
+.card.facebook .card-banner { background: #3b5998; }
+.card.instagram .card-banner { background: #E1306C; }
+
+.card-banner img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: #00796b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.card a:hover {
+  background: #004d40;
+}
+
+/*GALERIA CARRUSEL DE SERVICIOS*/
+.gallery-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+  flex-wrap: wrap; /* Esto ayuda si quieres que brinque a nueva línea en pantallas chicas */
+  justify-content: center; /* Centra si no hay overflow */
+}
+@media (max-width: 768px) {
+  .gallery-carousel {
+    justify-content: flex-start; /* en móvil mejor que empiece a la izquierda */
+  }
+}
+
+.gallery-carousel a {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-carousel img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
+
+
+/*SECCION MAPA*/
+.mapa-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/*MAPA2*/
+
+
+/*PAGINA SERVICIOS*/
+.tabla-precios {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.tabla-precios th {
+  background-color: #f0f0f0;
+  color: #2b6cb0;
+}
+
+.card-paquete {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card-paquete:hover {
+  /* transform: translateY(-5px); */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.titulo-paquete {
+  font-size: 1.4rem;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.tabla-precios {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  padding: 0.5rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-paquete {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #2e7d32;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-paquete:hover {
+  background: #1b5e20;
+}
+
+
+/*PAGE-CONOCENOS*/
+.galeria-grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.galeria-item2 img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* ==== FIX DESBORDES LATERALES ==== */
+html, body {
+  overflow-x: hidden; /* Previene scroll horizontal */
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container-F, .container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+

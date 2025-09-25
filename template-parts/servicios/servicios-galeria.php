@@ -1,4 +1,4 @@
-
+<!-- 
 <?php $base_uri = get_template_directory_uri(); ?>
 
 <section class="servicios-galeria section-padding bg-light">
@@ -75,6 +75,43 @@
         <img src="<?php echo $base_uri;  ?>/assets/img/galeria/c14.jpg" alt="imagen 16">
       </a>
 
+    </div>
+  </div>
+</section> -->
+
+<?php
+// --- GESTIÓN DE LA GALERÍA ---
+// Para añadir, quitar o cambiar imágenes, solo modificamos esta lista (tener en cuenta que se debe optimizar las imagenes).
+$imagenes_galeria = [
+    [ 'url' => 'cenote2.webp', 'alt' => '' ],
+    [ 'url' => 'cenote1.webp', 'alt' => '' ],
+    [ 'url' => 'senderismo.webp', 'alt' => '' ],
+    [ 'url' => 'galeria/c1.jpg', 'alt' => '' ],
+    [ 'url' => 'galeria/c2.jpg', 'alt' => '' ],
+    [ 'url' => 'galeria/c3.jpg', 'alt' => '' ],
+    [ 'url' => 'galeria/c4.jpg', 'alt' => '' ],
+    [ 'url' => 'galeria/c5.jpg', 'alt' => '' ],
+    [ 'url' => 'galeria/c6.jpg', 'alt' => '' ],
+    
+];
+
+$base_uri = get_template_directory_uri() . '/assets/img/';
+?>
+
+<section id="galeria-servicios" class="servicios-galeria section-padding bg-light">
+  <div class="container-F text-center">
+    <h2 class="text-primary heading-lg mb-4">Nuestras Experiencias en Imágenes</h2>
+    <p class="text-lg mb-5">Un vistazo a los momentos que puedes vivir con nosotros.</p>
+
+    <div class="gallery-carousel">
+      <?php foreach ( $imagenes_galeria as $imagen ) : ?>
+        <a href="<?php echo esc_url($base_uri . $imagen['url']); ?>" class="glightbox" data-gallery="servicios">
+          <img 
+            src="<?php echo esc_url($base_uri . $imagen['url']); ?>" 
+            alt="<?php echo esc_attr($imagen['alt']); ?>" 
+            loading="lazy">
+        </a>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

@@ -4,288 +4,338 @@ Theme URI:
 Author: Daniel Albornoz
 Author URI: 
 Description: Tema personalizado para 5cenotes
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: 5cenotes
 */
 
+/* === Fichas de Diseño (Variables CSS) === */
+:root {
+  /* Paleta de Colores Principal */
+  --color-primario: #496d3d;
+  --color-primario-oscuro: #3a5831;
+  --color-secundario: #7a5c3e;
+  --color-fondo: #f7f5f0;
+  --color-texto-principal: #3c3c3c;
+  --color-blanco: #fff;
+  --color-blanco-transparente: rgba(255, 255, 255, 0.15);
+  --color-negro-transparente-suave: rgba(0,0,0,0.1);
+  --color-negro-transparente-medio: rgba(0,0,0,0.15);
+  --color-negro-transparente-fuerte: rgba(0,0,0,0.2);
+  --color-negro-transparente-overlay: rgba(0,0,0,0.4);
+  --color-negro-transparente-overlay-fuerte: rgba(0,0,0,0.6);
+  --color-negro-transparente-sombra-texto: rgba(0,0,0,0.7);
+
+  /* Paleta de Acentos y Texto */
+  --color-texto-claro: #f0e6d2;
+  --color-texto-titulo: #EFE8D8;
+  --color-texto-color-1: #D9CFC1;
+  --color-texto-parrafo: #444;
+  --color-texto-secundario-tarjeta: #555;
+  --color-enlace-footer: #f0f0f0;
+  
+  /* Paleta Funcional */
+  --color-naranja-btn: #E89B4A;
+  --color-naranja-btn-hover: #F4C95D;
+  --color-verde-profundo: #0c1f1c;
+  --color-verde-paquete: #2e7d32;
+  --color-verde-paquete-hover: #1b5e20;
+  --color-tabla-header-bg: #f0f0f0;
+  --color-tabla-header-texto: #2b6cb0;
+  --color-tabla-borde: #ddd;
+  --color-card-destacada-borde: #2b6cb0;
+  --color-card-destacada-bg: #f0f8ff;
+  
+  /* Paleta de Tarjetas y Fondos */
+  --color-card-icon-bg-1: #eef6f3;
+  --color-card-icon-bg-2: #F5F0E6;
+  --color-card-icon-bg-3: #D9CFC1;
+  --color-card-icon-bg-4: #E6D8B8;
+  --color-card-icon-bg-5: #DDE5D1;
+  --color-card-icon-bg-6: #EAD3C0;
+  --color-card-icon-bg-7: #D3E4ED;
+  --color-card-icon-bg-8: #F9EEC0;
+  --color-card-icon-circle-bg: #d4ede4;
+  --color-card-icon-circle-texto: #2c7a7b;
+
+  /* Fuentes */
+  --fuente-serif: Georgia, 'Times New Roman', Times, serif;
+  --fuente-sans: Helvetica, sans-serif;
+  --fuente-mono: 'Courier New', Courier, monospace;
+  --fuente-titulos: 'Playfair Display', serif; /* Para h1, h2, h3, h4 */
+  --fuente-parrafos: 'Lora', serif;             /* Para p, li, texto largo */
+  --fuente-ui: 'Cabin', sans-serif;            /* Para botones, menús, subtítulos, UI */
+  --fuente-info: 'Rubik', sans-serif;            /* Para texto informativo, opcional */
+}
+
+/* === ESTILOS BASE Y NORMALIZACIÓN === */
+body {
+  font-family: var(--fuente-parrafos);
+  color: var(--color-texto-principal);
+  background-color: var(--color-fondo);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
+}
+
+a, button {
+  font-family: var(--fuente-ui);
+}
+
+
 /*Mini Framework*/
 
 /*COLORES*/
-.bg-Vrd{background-color: #496D3D;}/*verde selva*/
-.bg-vrd2{background-color: #3B5D3A;}/*Verde musgoso*/
-.bg-btn{background-color: #E89B4A;}/*naranja flor*/
-.bg-cten{background-color: #1E3D59;}
-.text-marfil{color: #F0E6D2;}
-.textTitulo{color: #EFE8D8;}/*Beige claro*/
-.bg-btn:hover
-{
-  background-color: #F4C95D;
-}/*hover del boton*/
+.bg-Vrd{ background-color: var(--color-primario); }
+.bg-vrd2{ background-color: var(--color-primario-oscuro); }
+.bg-btn{ background-color: var(--color-naranja-btn); }
+.bg-cten{ background-color: #1E3D59; } /* Nota: Este color no estaba en la paleta, se mantiene por ahora */
+.text-marfil{ color: var(--color-texto-claro); }
+.textTitulo{ color: var(--color-texto-titulo); }
+.text-oscuro{color: var(--color-texto-principal)}
+.bg-btn:hover { background-color: var(--color-naranja-btn-hover); }
 
-
-
-
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-.subtitle {
-  font-family: 'Cabin', sans-serif;
-}
-
-.paragraph {
-  font-family: 'Lora', serif;
-}
-
-.text-info {
-  font-family: 'Rubik', sans-serif;
-}
-
+h1, h2, h3 { font-family: var(--fuente-titulos-elegante); }
+.subtitle { font-family: var(--fuente-subtitulos); }
+.paragraph { font-family: var(--fuente-parrafos); }
+.text-info { font-family: var(--fuente-info); }
 
 /*Texto con sombra*/
-.text-shadow{text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);}
+.text-shadow{ text-shadow: 2px 2px 4px var(--color-negro-transparente-sombra-texto); }
 
-.text-indent{
-  text-indent: 2rem;
-}
-.text.block{
-  max-width: 60ch;
-  margin: 0 auto;
-}
+.text-indent{ text-indent: 2rem; }
+.text.block{ max-width: 60ch; margin: 0 auto; }
 
 .heading-xl{ font-size: 2.5rem; font-weight: bold;}
 .heading-md{ font-size: 1.75rem; font-weight: bold;}
 .heading-sm{ font-size: 1.25rem; font-weight: bold;}
 
 .text-italic{ font-style: italic;}
-.font-serif{ font-family: Georgia, 'Times New Roman', Times, serif;}
-.font-sans{ font-family: Helvetica, sans-serif;}
-.font-mono{ font-family: 'Courier New', Courier, monospace;}
+.font-serif{ font-family: var(--fuente-serif); }
+.font-sans{ font-family: var(--fuente-sans); }
+.font-mono{ font-family: var(--fuente-mono); }
 
 /*Centrar Texto*/
 .text-center {text-align: center;}
-/*alinear texto izquierda*/
 .text-left {text-align: left;}
-/*alinear texto Derecho*/
 .text-right{text-align: right;}
-/*Texto en mayuscula*/
 .text-justify{text-align: justify}
 .text-uppercase{text-transform: uppercase;}
 .text-capitalize{ text-transform: capitalize;}
-/*texto en negrita*/
-.font-bold{font-weight: 400;}
-/*Texto ligera*/
+.font-bold{font-weight: 700;} /* Corregido: 400 es normal, 700 es bold */
 .font-light{font-weight: 300;}
-/*Definir familia tipografica segun necesidad*/
-/*Tamaño del texto*/
-.text-xs  { font-size: 0.75rem; }   /* 12px */
-.text-sm  { font-size: 0.875rem; }  /* 14px */
-.text-base{ font-size: 1rem; }      /* 16px */
-.text-lg  { font-size: 1.125rem; }  /* 18px */
-.text-xl  { font-size: 1.25rem; }   /* 20px */
-.text-2xl { font-size: 1.5rem; }    /* 24px */
-.text-3xl { font-size: 1.875rem; }  /* 30px */
 
-.parrafo-lead
-{
+/*Tamaño del texto*/
+.text-xs  { font-size: 0.75rem; }
+.text-sm  { font-size: 0.875rem; }
+.text-base{ font-size: 1rem; }
+.text-lg  { font-size: 1.125rem; }
+.text-xl  { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+
+.parrafo-lead {
   font-size: 1.25rem;
   line-height: 1.8;
   font-weight: 400;
-  color: #444;
+  color: var(--color-texto-parrafo);
 }
 
-
-
-
 /*Text Colors*/
-.text-primary{color: #496d3d; }/* verde suave */
-.text-secondary{color: #7a5c3e;}/* marrón */
-.text-light{color: #f0e6d2;}/* beige claro */
-.text-color-1{color: #D9CFC1;} /*Beige ritual*/
-.text-color-2{color: #EFE8D8;}/*arena*/
-/*Backround*/
-.bg-primary{background-color: #496d3d;}
-.bg-secondary{background-color: #7a5c3e;}
-.bg-light{background-color: #f7f5f0;}
+.text-primary{ color: var(--color-primario); }
+.text-secondary{ color: var(--color-secundario); }
+.text-light{ color: var(--color-texto-claro); }
+.text-color-1{ color: var(--color-texto-color-1); }
+.text-color-2{ color: var(--color-texto-titulo); }
+.text-success { color: #2e7d32; } /* Verde para éxito o
+ naturaleza */
+.text-warning { color: #ff8f00; } /* Naranja/amarillo para avisos */
+.text-white {
+  color: var(--color-blanco);
+}
+/*Background*/
+.bg-primary{ background-color: var(--color-primario); }
+.bg-secondary{ background-color: var(--color-secundario); }
+.bg-light{ background-color: var(--color-fondo); }
 
-
-/*Espaciados- margin (LO de fuera del contenedor)*/
+/*Espaciados- margin*/
 .mb-1 { margin-bottom: 0.25rem; }
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-3 { margin-bottom: 1rem; }
 .mb-4 { margin-bottom: 1.5rem; }
 .mb-5 { margin-bottom: 2rem; }
-
 .mt-1 { margin-top: 0.25rem; }
 .mt-2 { margin-top: 0.5rem; }
 .mt-3 { margin-top: 1rem; }
 .mt-4 { margin-top: 1.5rem; }
 .mt-5 { margin-top: 2rem; }
-
 .ml-1 { margin-left: 0.25rem; }
 .ml-2 { margin-left: 0.5rem; }
 .ml-3 { margin-left: 1rem; }
 .ml-4 { margin-left: 1.5rem; }
 .ml-5 { margin-left: 2rem; }
-
 .mr-1 { margin-right: 0.25rem; }
 .mr-2 { margin-right: 0.5rem; }
 .mr-3 { margin-right: 1rem; }
 .mr-4 { margin-right: 1.5rem; }
 .mr-5 { margin-right: 2rem; }
 
-/*Espaciados - pading (dentro del contenedor) */
+/*Espaciados - padding*/
 .p-1 { padding: 0.25rem; }
 .p-2 { padding: 0.5rem; }
 .p-3 { padding: 1rem; }
 .p-4 { padding: 1.5rem; }
 .p-5 { padding: 2rem; }
-
 .pt-1 { padding-top: 0.25rem; }
 .pt-2 { padding-top: 0.5rem; }
 .pt-3 { padding-top: 1rem; }
 .pt-4 { padding-top: 1.5rem; }
 .pt-5 { padding-top: 2rem; }
-
 .pb-1 { padding-bottom: 0.25rem; }
 .pb-2 { padding-bottom: 0.5rem; }
 .pb-3 { padding-bottom: 1rem; }
 .pb-4 { padding-bottom: 1.5rem; }
 .pb-5 { padding-bottom: 2rem; }
-
 .pl-1 { padding-left: 0.25rem; }
 .pl-2 { padding-left: 0.5rem; }
 .pl-3 { padding-left: 1rem; }
 .pl-4 { padding-left: 1.5rem; }
 .pl-5 { padding-left: 2rem; }
-
 .pr-1 { padding-right: 0.25rem; }
 .pr-2 { padding-right: 0.5rem; }
 .pr-3 { padding-right: 1rem; }
 .pr-4 { padding-right: 1.5rem; }
 .pr-5 { padding-right: 2rem; }
 
-/*Layout y estrcuturas*/
-.container-F{
+/*Layout y estructuras*/
+.container-F, .container-A {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 1rem;
 }
-
-.container-A{
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-}
-
-.wrapper
-{
-  padding: 2rem;
-}
-
+.wrapper { padding: 2rem; }
 .align-top{ vertical-align: top;}
 .align-middle{ vertical-align: middle;}
 .align-bottom{ vertical-align: bottom;}
+/* Utilidad para crear un contexto de posicionamiento */
+.relative {
+  position: relative;
+}
+/* Utilidad de ancho máximo */
+.max-w-screen-md { max-width: 800px; }
+/* Utilidad para centrar elementos de bloque */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Utilidad para ancho máximo de texto (ideal para párrafos largos) */
+.max-w-prose {
+  max-width: 65ch; /* 'ch' es una unidad relativa al tamaño del carácter '0' de la fuente */
+}
 
 
 /*FLEXBOX*/
-/*Esto va en el padre*/
 .flex{display: flex;}
 .flex-row{flex-direction: row;}
 .flex-col{flex-direction: column;}
 .flex-wrap{flex-wrap: wrap;}
-
 .justify-start{ justify-content: flex-start;}
 .justify-center{ justify-content: center;}
-.justify-end{ justify-content: end;}
+.justify-end{ justify-content: flex-end;}
 .justify-between{ justify-content: space-between;}
 .justify-around{ justify-content: space-around;}
-
 .items-start{ align-items: flex-start;}
 .items-stretch{align-items: stretch;}
 .items-center{ align-items: center;}
 .items-end{ align-items: flex-end;}
 .item-baseline{ align-items: baseline;}
+.flex-center{ display: flex; justify-content: center; align-items: center; }
+.flex-between{ display: flex; justify-content: space-between; align-items: center; }
+.flex-column{ display: flex; flex-direction: column; }
 
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.flex-between{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
 /*GRIDS*/
-.grid-cols-2{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+.grid { display: grid; }
+.grid-cols-2{ display: grid; grid-template-columns: repeat(2,1fr); }
+.grid-cols-3{ display: grid; grid-template-columns: repeat(3,1fr); }
+.grid-cols-auto{ display: grid; grid-template-columns: auto auto auto; }
+.grid-gap-sm{ gap: 0.5rem; }
+.grid-gap-lg{ gap: 2rem; }
+
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 1rem; }
+.gap-4 { gap: 1.5rem; }
+.gap-5 { gap: 2rem; }
+.gap-sm{ gap: 0.5rem; }
+.gap-md{ gap: 1rem; }
+.gap-lg{ gap: 2rem; }
+
+/* Nueva clase de grid para la sección de valores */
+.grid-valores {
+  grid-template-columns: 1fr; /* Móviles por defecto */
 }
-.grid-cols-3{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+@media (min-width: 768px) {
+  .grid-valores {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+  }
 }
-.grid-cols-auto{
-  display: grid;
-  grid-template-columns: auto auto auto;
+@media (min-width: 1024px) {
+  .grid-valores {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+  }
 }
-.grid-gap-sm{
-  gap: 0.5;
-}
-.grid-gap-lg{
-  gap: 2rem;
-}
-
-
-/*La propiedad gap define el espacio entre elementos hijos en un contenedor que tenga display: flex o display: grid. 
-Es especialmente útil para mantener consistencia visual sin tener que usar margin-right o margin-bottom manualmente.*/
-.gap-1 { gap: 0.25rem; }  /* 4px */
-.gap-2 { gap: 0.5rem; }   /* 8px */
-.gap-3 { gap: 1rem; }     /* 16px */
-.gap-4 { gap: 1.5rem; }   /* 24px */
-.gap-5 { gap: 2rem; }     /* 32px */
-
-.gap-sm{ gap: 0.5rem}
-.gap-md{ gap: 1rem;}
-.gap-lg{ gap: 2rem;}
-
-
-
-
 
 /*BOTONES*/
-.btn{
+.btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #496d3d;
-    color: #f0e6d2;
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
     border-radius: 5px;
     text-decoration: none;
     font-weight: 700;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none; /* Añadido para consistencia */
+    cursor: pointer; /* Añadido para consistencia */
 }
-.btn:hover
-{
-    background-color: #7a5c3e;
-    color: #fff;
-    cursor: pointer;
+.btn:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* Modificador de botón para paquetes de servicios */
+.btn--paquete {
+    background-color: var(--color-verde-paquete);
+}
+.btn--paquete:hover {
+    background-color: var(--color-verde-paquete-hover);
+}
+/* Modificadores para botones de redes sociales */
+.btn--whatsapp { background-color: #25D366; }
+.btn--whatsapp:hover { background-color: #128C7E; }
+.btn--facebook { background-color: #1877F2; }
+.btn--facebook:hover { background-color: #0c5aab; }
+.btn--instagram { 
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.btn--instagram:hover { opacity: 0.9; }
+/*Para que el boton no se estire*/
+.self-center {
+  align-self: center;
 }
 
 /*TARJETAS*/
-.card-base1{
-  background: white;
+.card-base1 {
+  background: var(--color-blanco);
   border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px var(--color-negro-transparente-suave);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -293,55 +343,37 @@ Es especialmente útil para mantener consistencia visual sin tener que usar marg
 }
 
 .card-destacada {
-  border: 2px solid #2b6cb0;
-  background: #f0f8ff;
+  border: 2px solid var(--color-card-destacada-borde);
+  background: var(--color-card-destacada-bg);
 }
 
-
-.card-base2{
-  background: white;
+.card-base2 {
+  background: var(--color-blanco);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px var(--color-negro-transparente-suave);
   padding: 20px;
   transition: box-shadow 0.3s ease;
 }
-
 .card-base2:hover {
-  /*transform: translateY(-4px);*/
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px var(--color-negro-transparente-medio);
 }
-
-.card-base2 h3 {
-  text-align: center;
-}
-.card-base2 p {
-  text-align: justify;
-}
+.card-base2 h3 { text-align: center; }
+.card-base2 p { text-align: justify; }
 
 /*Imagenes*/
-.img-fluid{
-    max-width: 100%;
-    height: auto;
-}
+.img-fluid{ max-width: 100%; height: auto; }
 
 /*VISIBILIDAD*/
 .hidden{display: none !important;}
-
-@media (max-width: 768px) {
-    .hide-mobile{display: none !important;}
-}
-
-@media (min-width: 769px) {
-  .hide-desktop{display: none !important;}
-}
-
+@media (max-width: 768px) { .hide-mobile{display: none !important;} }
+@media (min-width: 769px) { .hide-desktop{display: none !important;} }
 .visible{display: block !important;}
 
 /*Divisores*/
 .divider {
   width: 80px;
   height: 4px;
-  background-color: #496d3d;
+  background-color: var(--color-primario);
   margin: 20px auto;
   border-radius: 2px;
 }
@@ -359,108 +391,80 @@ Es especialmente útil para mantener consistencia visual sin tener que usar marg
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--color-negro-transparente-overlay);
 }
 .overlay-green{
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.6); /* Color negro con opacidad */}
+    background: var(--color-negro-transparente-overlay-fuerte);
+}
 
 /*Espaciado entre secciones*/
-.section-padding {
-  padding: 80px 0;
-}
-.section-padding-sm {
-  padding: 40px 0;
-}
+.section-padding { padding: 80px 0; }
+.section-padding-sm { padding: 40px 0; }
 
 /*Bordes suaves para tarjetas*/
-.rounded {
-  border-radius: 8px;
-}
-.rounded-full {
-  border-radius: 50%;
-}
+.rounded { border-radius: 8px; }
+.rounded-full { border-radius: 50%; }
+
 /*Sombra suaves para cards o imagenes*/
-.shadow-sm {
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.shadow-lg {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+.shadow-sm { box-shadow: 0 2px 5px var(--color-negro-transparente-suave); }
+.shadow-lg { box-shadow: 0 8px 20px var(--color-negro-transparente-fuerte); }
 
 .card-servicio {
-  background-color: #fff;
+  background-color: var(--color-blanco);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.3s ease;
 }
+.card-servicio:hover { transform: translateY(-6px); }
+.cardServ-white{ background: var(--color-blanco); }
 
-.card-servicio:hover {
-  transform: translateY(-6px);
-}
-.cardServ-white{  background: #fff;}
-
-.img-card {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-.card-body {
-  padding: 1rem;
-}
-
+.img-card { width: 100%; height: 180px; object-fit: cover; }
+.card-body { padding: 1rem; }
 .card-media {
   display: flex;
   background: #f9f9f9;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px var(--color-negro-transparente-suave);
 }
-.img-media {
-  width: 40%;
-  object-fit: cover;
-}
-.media-body {
-  padding: 1rem;
-  width: 60%;
-}
+.img-media { width: 40%; object-fit: cover; }
+.media-body { padding: 1rem; width: 60%; }
 
 .card-icon {
-  background: #eef6f3;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px var(--color-negro-transparente-suave);
   text-align: center;
   transition: box-shadow 0.3s ease;
 }
 .card-icon:hover {
-  /*transform: translateY(-4px);*/
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px var(--color-negro-transparente-medio);
 }
-.color-card-1{background: #eef6f3;}
-.color-card-2{background: #F5F0E6	;}
-.color-card-3{background: #D9CFC1	;}
-.color-card-4{background: #E6D8B8;}
-.color-card-5{background: #DDE5D1;}
-.color-card-6{background: #EAD3C0;}
-.color-card-7{background: #D3E4ED;}
-.color-card-8{background: #F9EEC0	;}
+.color-card-1{ background: var(--color-card-icon-bg-1); }
+.color-card-2{ background: var(--color-card-icon-bg-2); }
+.color-card-3{ background: var(--color-card-icon-bg-3); }
+.color-card-4{ background: var(--color-card-icon-bg-4); }
+.color-card-5{ background: var(--color-card-icon-bg-5); }
+.color-card-6{ background: var(--color-card-icon-bg-6); }
+.color-card-7{ background: var(--color-card-icon-bg-7); }
+.color-card-8{ background: var(--color-card-icon-bg-8); }
 
 .icon-circle {
   width: 60px;
   height: 60px;
-  background: #d4ede4;
+  background: var(--color-card-icon-circle-bg);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
   font-size: 24px;
-  color: #2c7a7b;
+  color: var(--color-card-icon-circle-texto);
 }
 
 .grid-custom {
@@ -472,64 +476,6 @@ Es especialmente útil para mantener consistencia visual sin tener que usar marg
   grid-column: 1 / span 2;
   justify-self: center;
   width: 60%;
-}
-
-
-
-
-
-
-
-/* === Responsive Web Design Additions === */
-
-/* General reset for overflow issues */
-html, body {
-    overflow-x: hidden;
-}
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .container-F, .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-/* Mobile general */
-@media (max-width: 768px) {
-    .grid-cols-3 {
-        grid-template-columns: 1fr;
-    }
-    .grid-cols-2 {
-        grid-template-columns: 1fr;
-    }
-    header nav, .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-}
-
-/* Small mobile */
-@media (max-width: 480px) {
-    h1, .heading-xl {
-        font-size: 1.8rem;
-    }
-    h2, .heading-lg {
-        font-size: 1.5rem;
-    }
-    p {
-        font-size: 0.9rem;
-    }
-    .btn-primary {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
 }
 
 /* --- Accesibilidad --- */
@@ -558,4 +504,47 @@ html, body {
     top: 5px;
     left: 5px;
     z-index: 100000;
+}
+
+/* === Responsive Web Design Additions === */
+html, body { overflow-x: hidden; }
+
+@media (max-width: 1024px) {
+    .container-F, .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-cols-3, .grid-cols-2 { grid-template-columns: 1fr; }
+    header nav, .nav-container { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    h1, .heading-xl { font-size: 1.8rem; }
+    h2, .heading-lg { font-size: 1.5rem; }
+    p { font-size: 0.9rem; }
+    .btn { padding: 0.5rem 1rem; font-size: 0.9rem; } /* Aplicado al .btn base */
+}
+
+/* === Responsive Grid Utilities === */
+/* 'md' se activa en pantallas de 768px o más (tablets) */
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 'lg' se activa en pantallas de 1024px o más (escritorios) */
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

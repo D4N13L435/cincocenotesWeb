@@ -23,7 +23,7 @@ get_header();
 
       <div class="card-destacada mt-5 p-4">
         <p class="text-justify font-bold">
-          *Todos los paquetes incluyen: Chalecos salvavidas, área de descanso, estacionamiento, sanitarios, mesas y asientos.
+          *Todos nuestros paquetes incluyen: chalecos salvavidas, área de descanso con mesas y asientos, estacionamiento y acceso a sanitarios, regaderas y vestidores.
         </p>
       </div>
 

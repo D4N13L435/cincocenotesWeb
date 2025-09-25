@@ -397,10 +397,11 @@ header {
   flex-grow: 1;
 }
 .titulo-paquete {
-  /* NORMALIZADO - No necesita fuente específica, hereda de h-tags */
   font-size: 1.4rem;
   color: var(--color-verde-paquete);
   margin-bottom: 0.5rem;
+  /* --- NUEVA REGLA PARA ALINEACIÓN --- */
+  min-height: 3.7rem; 
 }
 .descripcion {
   font-size: 1rem;

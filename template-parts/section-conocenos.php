@@ -26,8 +26,7 @@
   <div class="container-F text-center">
     <h2 class="text-primary mb-4">Nuestra Esencia</h2>
     <p class="parrafo-lead text-block text-lg mb-5">
-      Somos una empresa ecoturística que ofrece experiencias únicas en los cenotes de Lázaro Cárdenas, Q. Roo, 
-      promoviendo la conservación de la naturaleza y el respeto a la cultura local.
+      Somos un proyecto de ecoturismo comunitario de Kantunilkín, Quintana Roo. En nuestra reserva de <strong>60 hectáreas</strong>, ofrecemos experiencias auténticas para que te dejes envolver por la naturaleza, la cultura y las costumbres de la región.
     </p>
     <h3 class="text-primary">Lo que nos guía</h3>
     <div class="grid-cols-3 gap-4 mb-5">

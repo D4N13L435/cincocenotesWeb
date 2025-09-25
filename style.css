@@ -531,3 +531,31 @@ html, body {
         font-size: 0.9rem;
     }
 }
+
+/* --- Accesibilidad --- */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.skip-link:focus {
+    background-color: #f1f1f1;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 100000;
+}

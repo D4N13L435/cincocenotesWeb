@@ -3,34 +3,52 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
    * 1. Lógica para el menú de navegación móvil (hamburguesa).
    */
-  function initMobileNav() {
-    const toggleBtn = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+function initMobileNav() {
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
 
-    // Si no existen los elementos en la página, no hacemos nada.
-    if (!toggleBtn || !navMenu) {
-      return;
-    }
-
-    const icon = toggleBtn.querySelector("i");
-
-    toggleBtn.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      const isExpanded = navMenu.classList.contains("active");
-
-      // Sincronizamos el atributo ARIA para accesibilidad.
-      toggleBtn.setAttribute('aria-expanded', isExpanded);
-
-      // Cambiamos el ícono.
-      if (isExpanded) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-      } else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-      }
-    });
+  if (!toggleBtn || !navMenu) {
+    return;
   }
+
+  const icon = toggleBtn.querySelector("i");
+
+  // Función para cerrar el menú
+  const closeMenu = () => {
+    navMenu.classList.remove("active");
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    icon.classList.remove("fa-times");
+    icon.classList.add("fa-bars");
+  };
+
+  // Función para abrir el menú
+  const openMenu = () => {
+    navMenu.classList.add("active");
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-times");
+  };
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Evita que el clic en el botón se propague y cierre el menú inmediatamente
+    const isExpanded = navMenu.classList.contains("active");
+    if (isExpanded) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // NUEVA LÓGICA: Cierre al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active')) {
+      // Si el clic NO fue dentro del menú
+      if (!navMenu.contains(e.target)) {
+        closeMenu();
+      }
+    }
+  });
+}
 
   /**
    * 2. Lógica para pausar el video cuando sale de la pantalla.

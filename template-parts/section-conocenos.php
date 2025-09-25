@@ -23,26 +23,42 @@
 </section> -->
 
 <section id="conocenos" class="conocenos section-padding-sm">
-  <div class="container-F text-center">
-    <h2 class="text-primary mb-4">Nuestra Esencia</h2>
-    <p class="parrafo-lead text-block text-lg mb-5">
-      Somos un proyecto de ecoturismo comunitario de Kantunilkín, Quintana Roo. En nuestra reserva de <strong>60 hectáreas</strong>, ofrecemos experiencias auténticas para que te dejes envolver por la naturaleza, la cultura y las costumbres de la región.
-    </p>
-    <h3 class="text-primary">Lo que nos guía</h3>
-    <div class="grid-cols-3 gap-4 mb-5">
-      <div class="card-icon color-card-7 shadow-sm">
-        <h4>Misión</h4>
-        <p>Brindar actividades turísticas que conecten al visitante con la naturaleza y fomenten el respeto por el medio ambiente.</p>
+  <div class="container-F">
+    
+    <div class="media-card-esencia">
+      <div class="media-card-imagen">
+        <img 
+          src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/Cenote-Nuestraescencia.jpg" 
+          alt="Vista interior de un cenote semiabierto con vegetación exuberante." 
+          class="img-fluid rounded shadow-lg" 
+          loading="lazy">
       </div>
-      <div class="card-icon color-card-7 shadow-sm">
-        <h4>Visión</h4>
-        <p>Ser líderes en ecoturismo comunitario, ofreciendo calidad y conservando nuestro patrimonio natural y cultural.</p>
-      </div>
-      <div class="card-icon color-card-7 shadow-sm">
-        <h4>Valores</h4>
-        <p>Honestidad, Respeto, Responsabilidad, Compromiso y Pasión en cada experiencia que ofrecemos.</p>
+      <div class="media-card-contenido">
+        <h2 class="text-primary mb-4 text-center">Nuestra Esencia</h2>
+        <p class="text-lg mb-5 text-justify">
+          Somos un proyecto de ecoturismo comunitario de Kantunilkín, Quintana Roo. En nuestra reserva de <strong>60 hectáreas</strong>, ofrecemos experiencias auténticas para que te dejes envolver por la naturaleza, la cultura y las costumbres de la región.
+        </p>
+        <a href="<?php echo esc_url( site_url('/conocenos') ); ?>" class="btn self-center">Saber más</a>
       </div>
     </div>
-    <a href="<?php echo esc_url( site_url('/conocenos') ); ?>" class="btn">Saber más</a>
+
+    <div class="mt-5 text-center">
+        <h3 class="text-primary">Lo que nos guía</h3>
+        <div class="grid md:grid-cols-3 gap-4 mt-4">
+            <div class="card-icon color-card-7 shadow-sm">
+                <h4>Misión</h4>
+                <p>Brindar actividades que conecten al visitante con la naturaleza y fomenten el respeto por el medio ambiente.</p>
+            </div>
+            <div class="card-icon color-card-7 shadow-sm">
+                <h4>Visión</h4>
+                <p>Ser líderes en ecoturismo comunitario, ofreciendo calidad y conservando nuestro patrimonio natural y cultural.</p>
+            </div>
+            <div class="card-icon color-card-7 shadow-sm">
+                <h4>Valores</h4>
+                <p>Honestidad, Respeto, Responsabilidad, Compromiso y Pasión en cada experiencia que ofrecemos.</p>
+            </div>
+        </div>
+    </div>
+
   </div>
 </section>

@@ -491,3 +491,78 @@ html, body { overflow-x: hidden; }
     padding: 2rem;
   }
 }
+
+/* --- Estilos Mejorados para la Galería --- */
+.gallery-item {
+  position: relative; 
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%; /* Asegura que la imagen llene el contenedor */
+  object-fit: cover; /* Evita que la imagen se deforme */
+  transition: transform 0.4s ease;
+}
+
+/* Capa de color semitransparente (inicialmente invisible) */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primario);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none; /* <-- AÑADE ESTA LÍNEA */
+}
+
+/* Ícono de lupa (inicialmente invisible) */
+.gallery-item::after {
+  content: '👁'; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  pointer-events: none; /* <-- AÑADE ESTA LÍNEA */
+}
+
+/* Estilos al pasar el cursor */
+.gallery-item:hover img {
+  transform: scale(1.1); 
+}
+
+.gallery-item:hover::before {
+  opacity: 0.7; /* Muestra la capa de color */
+}
+
+.gallery-item:hover::after {
+  opacity: 1; /* Muestra el ícono */
+}
+
+/* --- Mejora de Interacción para Tarjetas de Servicio --- */
+.card-icon .icon-circle,
+.card-icon .icon-circle i {
+  transition: all 0.4s ease; /* Transición suave para todos los cambios */
+}
+
+.card-icon:hover .icon-circle {
+  background-color: var(--color-primario); /* Cambia el fondo del círculo */
+  transform: scale(1.1); /* Agranda ligeramente el círculo */
+}
+
+.card-icon:hover .icon-circle i {
+  color: var(--color-blanco); /* Cambia el color del ícono */
+  transform: rotateY(360deg); /* El ícono gira sobre su eje Y */
+}

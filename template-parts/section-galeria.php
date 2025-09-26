@@ -40,19 +40,16 @@
       <div class="gallery-item">
         <a href="<?php echo get_template_directory_uri(); ?>/assets/img/senderismo.webp" class="glightbox">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/senderismo.webp" alt="Persona caminando en un sendero selvático hacia un cenote." loading="lazy">
-          <div class="overlay">Senderismo</div>
         </a>
       </div>
       <div class="gallery-item">
         <a href="<?php echo get_template_directory_uri(); ?>/assets/img/cenote1.webp" class="glightbox">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cenote1.webp" alt="Vista acuática de un cenote abierto con aguas cristalinas." loading="lazy">
-          <div class="overlay">Nado en cenotes</div>
         </a>
       </div>
       <div class="gallery-item">
         <a href="<?php echo get_template_directory_uri(); ?>/assets/img/cenote2.webp" class="glightbox">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cenote2.webp" alt="Cenote semiabierto rodeado de vegetación exuberante." loading="lazy">
-          <div class="overlay">Visita cenotes</div>
         </a>
       </div>
     </div>

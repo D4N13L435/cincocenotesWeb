@@ -4,7 +4,7 @@ Theme URI:
 Author: Daniel Albornoz
 Author URI: 
 Description: Tema personalizado para 5cenotes
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: 5cenotes
@@ -369,7 +369,7 @@ h1, h2, h3 { font-family: var(--fuente-titulos-elegante); }
   box-shadow: 0 8px 16px var(--color-negro-transparente-medio);
 }
 .card-base2 h3 { text-align: center; }
-.card-base2 p { text-align: justify; }
+/* .card-base2 p { text-align: justify; } */
 
 /*Imagenes*/
 .img-fluid{ max-width: 100%; height: auto; }

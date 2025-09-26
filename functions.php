@@ -40,6 +40,9 @@ function cinco_cenotes_scripts() {
         // GLightbox desde CDN
     wp_enqueue_style('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', array(), null);
     wp_enqueue_script('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js', array(), null, true);
+    // --- LIBRERÍA SPLIDE.JS PARA SLIDERS ---
+    wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');
+    wp_enqueue_script('splide-js', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array(), null, true);
 
     // 3. Hoja de estilos principal (style.css - mini-framework).
     wp_enqueue_style(
@@ -62,7 +65,7 @@ function cinco_cenotes_scripts() {
     wp_enqueue_script(
         'cinco-cenotes-main-js',
         get_template_directory_uri() . '/assets/js/main.js',
-        array('glightbox'), // <--- AÑADE 'glightbox' AQUÍ
+        array('glightbox'), //
         filemtime( get_template_directory() . '/assets/js/main.js' ),
         true
     );

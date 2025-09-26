@@ -111,9 +111,31 @@ function initMobileNav() {
     }
   }
 
+  /**
+ * 4. Lógica para el slider de imágenes (Splide.js)
+ */
+function initImageSlider() {
+  const sliderElement = document.querySelector('#gallery-slider');
+  if (sliderElement) {
+    new Splide(sliderElement, {
+      type       : 'loop',
+      perPage    : 1,
+      autoplay   : true,
+      interval   : 4000,
+      pauseOnHover: true,
+      arrows     : true,
+      pagination : true,
+      gap        : '1rem',
+      height     : '60vh',
+      lazyLoad   : 'sequential',
+    }).mount();
+  }
+}
+
   // --- Inicializamos todas las funcionalidades ---
   initMobileNav();
   initVideoObserver();
   initLightbox();
+  initImageSlider();
 
 });

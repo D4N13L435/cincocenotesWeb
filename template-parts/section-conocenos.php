@@ -28,7 +28,7 @@
     <div class="media-card-esencia">
       <div class="media-card-imagen">
         <img 
-          src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/Cenote-Nuestraescencia.jpg" 
+          src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/Cenote-Nuestraescencia.webp" 
           alt="Vista interior de un cenote semiabierto con vegetación exuberante." 
           class="img-fluid rounded shadow-lg" 
           loading="lazy">

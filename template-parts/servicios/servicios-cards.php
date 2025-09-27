@@ -34,7 +34,7 @@
 <section id="lista-servicios" class="mb-6">
   <div class="grid md:grid-cols-3 gap-4">
     
-    <div class="card-icon color-card-4">
+    <div class="card-icon color-card-4 border hover-glow-primary">
       <div class="icon-circle">
         <i class="fas fa-water" aria-hidden="true"></i>
       </div>
@@ -42,7 +42,7 @@
       <p class="text-center">Explora los cenotes más emblemáticos con guías locales que comparten su historia y secretos.</p>
     </div>
 
-    <div class="card-icon color-card-5">
+    <div class="card-icon color-card-5 border hover-glow-primary">
       <div class="icon-circle">
         <i class="fas fa-hiking" aria-hidden="true"></i>
       </div>
@@ -50,7 +50,7 @@
       <p class="text-center">Recorre caminos ejidales y descubre la riqueza natural y cultural de la región.</p>
     </div>
 
-    <div class="card-icon color-card-6">
+    <div class="card-icon color-card-6 border hover-glow-primary">
       <div class="icon-circle">
         <i class="fas fa-utensils" aria-hidden="true"></i>
       </div>

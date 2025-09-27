@@ -25,7 +25,7 @@
 <section id="conocenos" class="conocenos section-padding-sm">
   <div class="container-F">
     
-    <div class="media-card-esencia">
+    <div class="media-card-esencia hover-shine-effect">
       <div class="media-card-imagen">
         <img 
           src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/Cenote-Nuestraescencia.webp" 

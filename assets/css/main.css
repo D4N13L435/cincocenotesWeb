@@ -602,6 +602,10 @@ html, body { overflow-x: hidden; }
   transform: scale(1.03); /* Lo hacemos ligeramente más grande */
   box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Una sombra más pronunciada */
 }
+.card-paquete.hover-glow-primary:hover {
+  transform: scale(1.05); /* Un poco más de crecimiento al pasar el cursor */
+  box-shadow: 0 0 15px 5px rgba(73, 109, 61, 0.3);
+}
 
 .destacado-badge {
   position: absolute;

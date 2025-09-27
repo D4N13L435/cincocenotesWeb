@@ -4,7 +4,7 @@
       <p class="text-block text-lg mb-6">Síguenos y escríbenos en nuestras redes sociales.</p>
 
       <div class="contact-cards">
-  <div class="card whatsapp">
+  <div class="card whatsapp hover-shine-effect">
     <div class="card-banner">
       <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/whatsappLogo.png" alt="Logo de WhatsApp" loading="lazy">
     </div>
@@ -13,7 +13,7 @@
     <a href="https://wa.me/529842807474" target="_blank" class="btn btn--whatsapp mb-3">Enviar mensaje</a>
   </div>
 
-  <div class="card facebook">
+  <div class="card facebook hover-shine-effect">
     <div class="card-banner">
       <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/FacebookLogo.png" alt="Logo de Facebook" loading="lazy">
     </div>
@@ -22,7 +22,7 @@
     <a href="https://www.facebook.com/profile.php?id=61572421927174" target="_blank" class="btn btn--facebook mb-3">Ir a Facebook</a>
   </div>
 
-  <div class="card instagram">
+  <div class="card instagram hover-shine-effect">
     <div class="card-banner">
       <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/InstaLogo.png" alt="Logo de Instagram" loading="lazy">
     </div>

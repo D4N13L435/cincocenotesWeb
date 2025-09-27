@@ -18,10 +18,13 @@
 
 <section id="quienes-somos" class="section-padding">
   <div class="container-F">
-    <div class="card-base2 shadow-lg" style="max-width: 900px; margin: 0 auto;">
+    <div class="card-base2 shadow-colored-primary border-gradient-primary" style="max-width: 900px; margin: 0 auto;">
       <div class="p-4">
-        <h2 class="heading-lg text-primary text-center">Quiénes Somos</h2>
-        <div class="divider"></div>
+        <h2 class="heading-lg text-gradient-primary text-center">Quiénes Somos</h2>
+                <div class="divider-icon">
+                <i class="fas fa-feather-alt"></i>
+                </div>
+
         <div class="text-justify text-lg">
             <p class="mb-4">
               Somos una empresa comunitaria dedicada al ecoturismo sustentable en Kantunilkín, Quintana Roo. Nuestro propósito es ofrecer experiencias auténticas que conecten a los visitantes con la naturaleza, la cultura y las tradiciones de la región.

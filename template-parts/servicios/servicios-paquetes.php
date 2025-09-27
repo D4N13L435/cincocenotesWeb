@@ -110,7 +110,7 @@
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center">
       
-      <article class="card-paquete shadow-lg">
+      <article class="card-paquete shadow-lg hover-shine-effect">
         <h3 class="titulo-paquete">
           <i class="fas fa-water text-primary mr-2" aria-hidden="true"></i>
           Paquete 1: Nado en Cenote
@@ -125,7 +125,7 @@
         <!-- <a href="#contacto" class="btn btn--paquete mt-3">Reservar</a> -->
       </article>
 
-      <article class="card-paquete shadow-lg card-paquete--destacado">
+      <article class="card-paquete shadow-lg card-paquete--destacado hover-glow-primary">
         <div class="destacado-badge">Más Popular</div>
         <h3 class="titulo-paquete">
           <i class="fas fa-leaf text-success mr-2" aria-hidden="true"></i>
@@ -141,7 +141,7 @@
         <!-- <a href="#contacto" class="btn btn--paquete mt-3">Reservar</a> -->
       </article>
 
-      <article class="card-paquete shadow-lg">
+      <article class="card-paquete shadow-lg hover-shine-effect">
         <h3 class="titulo-paquete">
           <i class="fas fa-dove text-warning mr-2" aria-hidden="true"></i>
           Paquete 3: Experiencia Completa

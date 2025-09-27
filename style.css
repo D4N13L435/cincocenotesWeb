@@ -4,7 +4,7 @@ Theme URI:
 Author: Daniel Albornoz
 Author URI: 
 Description: Tema personalizado para 5cenotes
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: 5cenotes
@@ -26,6 +26,8 @@ Text Domain: 5cenotes
   --color-negro-transparente-overlay: rgba(0,0,0,0.4);
   --color-negro-transparente-overlay-fuerte: rgba(0,0,0,0.6);
   --color-negro-transparente-sombra-texto: rgba(0,0,0,0.7);
+    /* NUEVA VARIABLE */
+  --color-borde-sutil: rgba(0, 0, 0, 0.08);
 
   /* Paleta de Acentos y Texto */
   --color-texto-claro: #f0e6d2;
@@ -421,8 +423,15 @@ h1, h2, h3 { font-family: var(--fuente-titulos-elegante); }
 .rounded { border-radius: 8px; }
 .rounded-full { border-radius: 50%; }
 
+/* NUEVA UTILIDAD DE BORDE */
+.border {
+  border: 1px solid var(--color-borde-sutil);
+}
+
 /*Sombra suaves para cards o imagenes*/
 .shadow-sm { box-shadow: 0 2px 5px var(--color-negro-transparente-suave); }
+/* NUEVA UTILIDAD DE SOMBRA */
+.shadow-md { box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); }
 .shadow-lg { box-shadow: 0 8px 20px var(--color-negro-transparente-fuerte); }
 
 .card-servicio {
@@ -559,4 +568,213 @@ html, body { overflow-x: hidden; }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* ============================================= */
+/* === FASE 3: CAJA DE LEGOS DE DISEÑO VISUAL === */
+/* ============================================= */
+
+/* --- 1. Bordes Decorativos --- */
+
+.border-accent-top-primary {
+  border-top: 4px solid var(--color-primario);
+  padding-top: 1.5rem;
+}
+.border-accent-top-secondary {
+  border-top: 4px solid var(--color-secundario);
+  padding-top: 1.5rem;
+}
+.border-dashed-subtle {
+  border-top: 2px dashed var(--color-borde-sutil);
+}
+/* NUEVO: Borde con degradado */
+.border-gradient-primary {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--color-blanco), var(--color-blanco)) padding-box, linear-gradient(45deg, var(--color-primario), var(--color-secundario)) border-box;
+}
+
+/* --- 2. Sombras con Personalidad --- */
+
+.shadow-colored-primary {
+  box-shadow: 0 10px 25px -5px rgba(73, 109, 61, 0.2), 0 8px 10px -6px rgba(73, 109, 61, 0.2);
+}
+.shadow-colored-secondary {
+  box-shadow: 0 10px 25px -5px rgba(122, 92, 62, 0.2), 0 8px 10px -6px rgba(122, 92, 62, 0.2);
+}
+.shadow-inset {
+  box-shadow: inset 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+}
+/* NUEVO: Efecto de "resplandor" */
+.glow-primary {
+  box-shadow: 0 0 15px 5px rgba(73, 109, 61, 0.3);
+}
+.hover-glow-primary:hover {
+  box-shadow: 0 0 15px 5px rgba(73, 109, 61, 0.3);
+}
+
+
+/* --- 3. Fondos y Superposiciones --- */
+
+.bg-gradient-light {
+  background-image: linear-gradient(to top, var(--color-fondo) 0%, var(--color-blanco) 100%);
+}
+.overlay-glass {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* --- 4. Efectos de Texto Especiales --- */
+
+/* CORREGIDO: Con color de respaldo */
+.text-gradient-primary {
+  color: var(--color-primario); /* Color de respaldo */
+  background: linear-gradient(45deg, var(--color-primario), var(--color-secundario));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+/* --- 5. Efectos y Formas para Imágenes --- */
+
+/* NUEVO: Filtros para imágenes */
+.filter-grayscale { filter: grayscale(100%); }
+.filter-sepia { filter: sepia(70%); }
+.hover-filter-none:hover { filter: none; } /* Quita el filtro al pasar el cursor */
+
+/* NUEVO: Forma de hexágono para imágenes (ideal para avatares o íconos) */
+.shape-hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* ---6. Divisores Decorativos --- */
+
+/* Divisor con un ícono en el centro */
+.divider-icon {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--color-borde-sutil);
+}
+/* Las líneas a los lados del ícono */
+.divider-icon::before,
+.divider-icon::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--color-borde-sutil);
+}
+/* Espacio entre las líneas y el ícono */
+.divider-icon:not(:empty)::before {
+  margin-right: .5em;
+}
+.divider-icon:not(:empty)::after {
+  margin-left: .5em;
+}
+/* Estilo del ícono dentro del divisor */
+.divider-icon i {
+  font-size: 1.2rem;
+  color: var(--color-primario);
+}
+
+
+/* --- 7. Nuevos Estilos de Botón --- */
+
+/* Botón "Outline" o "Fantasma" */
+.btn--outline-primary {
+  background-color: transparent;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+}
+.btn--outline-primary:hover {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.btn--outline-secondary {
+  background-color: transparent;
+  color: var(--color-secundario);
+  border: 2px solid var(--color-secundario);
+}
+.btn--outline-secondary:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+}
+/* --- 8. Formas Creativas para Imágenes (usando clip-path) --- */
+
+/* Imagen con un corte diagonal elegante */
+.shape-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+/* Imagen con un arco suave en la parte inferior */
+.shape-arch-bottom {
+  clip-path: ellipse(100% 60% at 50% 100%);
+}
+
+
+/* ---9. Efectos Hover Avanzados para Tarjetas --- */
+
+/* Efecto "brillo" que cruza la tarjeta al pasar el cursor */
+.hover-shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+.hover-shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%; /* Empieza fuera, a la izquierda */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg); /* Inclina el brillo */
+  transition: left 0.6s ease;
+}
+.hover-shine-effect:hover::after {
+  left: 150%; /* Se mueve hasta salir por la derecha */
+}
+
+/* Efecto donde el contenido se desliza hacia arriba (como en tu imagen de referencia) */
+/* Uso: Un div contenedor con la clase .card-slide-up y dentro, un div .card-slide-up-content */
+.card-slide-up {
+  position: relative;
+  overflow: hidden;
+}
+.card-slide-up-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  transform: translateY(60%); /* Por defecto, solo se ve una parte */
+  transition: transform 0.4s ease;
+}
+.card-slide-up-content h4, .card-slide-up-content p {
+  opacity: 0; /* Oculta el texto por defecto */
+  transition: opacity 0.4s ease;
+}
+.card-slide-up:hover .card-slide-up-content {
+  transform: translateY(0); /* El contenido sube por completo */
+}
+.card-slide-up:hover .card-slide-up-content h4,
+.card-slide-up:hover .card-slide-up-content p {
+  opacity: 1; /* Muestra el texto */
+}
+
+
+/* --- 🧱 10. Utilidades de Animación (Scroll) --- */
+
+/* Clases finales para las animaciones de entrada que ya discutimos */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

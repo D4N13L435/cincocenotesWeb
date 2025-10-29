@@ -6,7 +6,7 @@
       <div class="contact-cards">
   <div class="card whatsapp hover-shine-effect">
     <div class="card-banner">
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/whatsappLogo.png" alt="Logo de WhatsApp" loading="lazy">
+        <i class="fab fa-whatsapp text-white" style="font-size: 2.5rem;" aria-hidden="true"></i>
     </div>
     <h3>WhatsApp</h3>
     <p>+52 984-280-74-74</p>
@@ -15,7 +15,7 @@
 
   <div class="card facebook hover-shine-effect">
     <div class="card-banner">
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/FacebookLogo.png" alt="Logo de Facebook" loading="lazy">
+          <i class="fab fa-facebook-f text-white" style="font-size: 2.5rem;" aria-hidden="true"></i>
     </div>
     <h3>Facebook</h3>
     <p>@5 cenotes spr de ir</p>
@@ -24,7 +24,7 @@
 
   <div class="card instagram hover-shine-effect">
     <div class="card-banner">
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/InstaLogo.png" alt="Logo de Instagram" loading="lazy">
+          <i class="fab fa-instagram text-white" style="font-size: 2.5rem;" aria-hidden="true"></i>
     </div>
     <h3>Instagram</h3>
     <p>@5.cenotes</p>

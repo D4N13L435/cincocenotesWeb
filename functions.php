@@ -73,7 +73,7 @@ function cinco_cenotes_scripts() {
     wp_enqueue_script(
         'cinco-cenotes-main-js',
         get_template_directory_uri() . '/assets/js/main.js',
-        array('glightbox'), //
+        array('glightbox', 'splide-js'),
         filemtime( get_template_directory() . '/assets/js/main.js' ),
         true
     );

@@ -119,8 +119,8 @@
           Sumérgete en las aguas cristalinas de un cenote rodeado de naturaleza. Una experiencia ideal para una conexión breve pero profunda con la magia del lugar.
         </p>
         <table class="tabla-precios">
-          <thead><tr><th>Nacional</th><th>Extranjero</th></tr></thead>
-          <tbody><tr><td>$150</td><td>$200</td></tr></tbody>
+          <thead><tr><th>Adultos</th><th>Niños</th></tr></thead>
+          <tbody><tr><td>$200</td><td>$100</td></tr></tbody>
         </table>
         <!-- <a href="#contacto" class="btn btn--paquete mt-3">Reservar</a> -->
       </article>
@@ -135,23 +135,23 @@
           Conecta con la selva a través de una caminata guiada y nada en dos de nuestros cenotes. Descubre los secretos de la flora y fauna local.
         </p>
         <table class="tabla-precios">
-          <thead><tr><th>Nacional</th><th>Extranjero</th></tr></thead>
-          <tbody><tr><td>$300</td><td>$300</td></tr></tbody>
+          <thead><tr><th>Adultos</th><th>Niños</th></tr></thead>
+          <tbody><tr><td>$300</td><td>$150</td></tr></tbody>
         </table>
         <!-- <a href="#contacto" class="btn btn--paquete mt-3">Reservar</a> -->
       </article>
 
       <article class="card-paquete shadow-lg hover-shine-effect">
         <h3 class="titulo-paquete">
-          <i class="fas fa-dove text-warning mr-2" aria-hidden="true"></i>
+          <i class="fas fa-dove text-success mr-2" aria-hidden="true"></i>
           Paquete 3: Experiencia Completa
         </h3>
         <p class="descripcion">
           La aventura definitiva: nada en dos cenotes, observa otros dos desde miradores exclusivos y recorre nuestros senderos interpretativos con un guía local.
         </p>
         <table class="tabla-precios">
-          <thead><tr><th>Nacional</th><th>Extranjero</th></tr></thead>
-          <tbody><tr><td>$450</td><td>$450</td></tr></tbody>
+          <thead><tr><th>Adultos</th><th>Niños</th></tr></thead>
+          <tbody><tr><td>$450</td><td>$350</td></tr></tbody>
         </table>
         <!-- <a href="#contacto" class="btn btn--paquete mt-3">Reservar</a> -->
       </article>

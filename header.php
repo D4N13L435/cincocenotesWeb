@@ -3,10 +3,10 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="preload" as="image" href="<?php echo get_template_directory_uri(); ?>/assets/img/conocenos-bg.jpg"> -->
     <?php if ( is_front_page() ) : ?>
     <title>5 Cenotes: Ecoturismo y Nado en Cenotes en Kantunilkin</title>
     <meta name="description" content="Vive experiencias naturales y místicas en 5 Cenotes, Kantunilkín. Explora nuestra reserva de 60 hectáreas con nado en cenotes y senderismo interpretativo. ¡Reserva tu aventura hoy!">
+    <link rel="preload" as="image" href="<?php echo get_template_directory_uri(); ?>/assets/img/Cover-cenote.webp">
     <?php elseif ( is_page('conocenos') ) : ?>
     <title>Nuestra Historia y Misión | 5 Cenotes Ecoturismo Comunitario</title>
     <meta name="description" content="Conoce la historia de 5 Cenotes, un proyecto de ecoturismo en una reserva de 60 hectáreas en Kantunilkín. Descubre nuestra misión y el compromiso de nuestra comunidad.">

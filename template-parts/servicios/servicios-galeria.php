@@ -123,7 +123,7 @@ $imagenes_galeria = [
     ['url' => 'galeria/c2.jpg', 'alt' => 'Luz del sol entrando en un cenote semiabierto.'],
     ['url' => 'galeria/c3.jpg', 'alt' => 'Visitantes disfrutando de un baño en el cenote.'],
     ['url' => 'galeria/c4.jpg', 'alt' => 'Raíces de árboles buscando el agua de un cenote.'],
-    // ... puedes añadir el resto de tus imágenes aquí
+    //aquí
 ];
 $base_uri = get_template_directory_uri() . '/assets/img/';
 ?>

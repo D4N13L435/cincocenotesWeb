@@ -15,14 +15,13 @@ function cinco_cenotes_setup() {
     register_nav_menus( array(
         'menu-principal' => __( 'Menú Principal', '5cenotes' ),
     ) );
-
+    
     add_theme_support( 'custom-logo', array(
     'height'      => 250,
     'width'       => 250,
     'flex-height' => true,
     'flex-width'  => true,
     ) );
-
 }
 add_action( 'after_setup_theme', 'cinco_cenotes_setup' );
 
@@ -94,7 +93,3 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 ?>
-
-
-
-

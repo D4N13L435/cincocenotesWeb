@@ -69,3 +69,7 @@ $base_uri = get_template_directory_uri() . '/assets/img/';
   </div>
 
 </section>
+
+
+
+
